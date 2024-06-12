@@ -42,7 +42,18 @@ def register():
 @app.route('/dashboard')
 def dashboard():
     if 'user_data' in session:
-        return render_template('dashboard.html', user_data=session['user_data'])
+        user_data = session['user_data']
+        username = user_data.get('username')
+        subscriptions = user_data.get('subscriptions')
+        subscription = subscriptions[0].get('subscription') if subscriptions else None
+        expiry = subscriptions[0].get('expiry') if subscriptions else None
+        ip = user_data.get('ip')
+        creationDate = user_data.get('createdate')
+        lastLogin = user_data.get('lastlogin')
+        
+        return render_template('dashboard.html', username=username, subscriptions=subscriptions,
+                               subscription=subscription, expiry=expiry, ip=ip,
+                               creationDate=creationDate, lastLogin=lastLogin)
     return redirect(url_for('login'))
 
 @app.route('/logout')
