@@ -5,7 +5,9 @@ A simple Flask extension to integrate KeyAuth API.
 ## Installation
 
 ```bash
-pip install flask_keyauth
+git clone https://github.com/Sorted1/flask-keyauth.git
+cd flask-keyauth
+python setup.py install
 ```
 ## Usage/Examples
 
