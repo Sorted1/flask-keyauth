@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.flask_keyauth]
+name = "flask_keyauth"
+version = "0.1.0"
+packages = []
+install_requires = [
+    "Flask",
+    "requests",
+]
+author = "sorted1"
+author_email = ""
+description = "A quick and simple way to integrate keyauth.win and keyauth.cc into your flask applications."
+long_description = """
+A quick and simple way to integrate keyauth.win and keyauth.cc into your flask applications.
+"""
+long_description_content_type = "text/markdown"  # Specify the content type
+url = "https://github.com/sorted1/flask-keyauth"
+
+[tool.flask_keyauth.project_urls]
+Website = "https://sorted.live"
+Source = "https://github.com/sorted1/flask-keyauth"
+
+[tool.flask_keyauth.classifiers]
+Programming_Language = "Python :: 3"
+Framework = "Framework :: Flask"
+License = "License :: OSI Approved :: MIT License"
+Operating_System = "Operating System :: OS Independent"
+
+[tool.flask_keyauth.dependencies]
+Flask = "*"
+requests = "*"
