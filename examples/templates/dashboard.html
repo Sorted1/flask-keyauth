@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    {% if username %}
+    <p>Username: {{ username }}</p>
+    {% endif %}
+    {% if subscriptions %}
+    <p>Subscription: {{ subscription }}</p>
+    <p>Expiry: {{ expiry }}</p>
+    {% endif %}
+    {% if ip %}
+    <p>IP: {{ ip }}</p>
+    {% endif %}
+    {% if creationDate %}
+    <p>Creation Date: {{ creationDate }}</p>
+    {% endif %}
+    {% if lastLogin %}
+    <p>Last Login: {{ lastLogin }}</p>
+    {% endif %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
